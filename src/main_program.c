@@ -6,7 +6,7 @@
 /*   By: awis <awis@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 19:15:58 by awis              #+#    #+#             */
-/*   Updated: 2023/06/13 21:11:00 by awis             ###   ########.fr       */
+/*   Updated: 2023/06/14 16:06:02 by awis             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	run_program(int fd)
 	close(fd);
 	game.mlx_ptr = mlx_init();
 	game.win_ptr = mlx_new_window(game.mlx_ptr, game.map_width
-			* BLOCK_SIZE, game.map_height * BLOCK_SIZE, "Test Window");
+			* BLOCK_SIZE, game.map_height * BLOCK_SIZE, "The So_Long game");
 	draw_map(&game);
 	mlx_hook(game.win_ptr, 2, 1L << 0, key_press_handler, &game);
 	mlx_hook(game.win_ptr, 17, 1L << 17, close_handler, NULL);
